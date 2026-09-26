@@ -2,17 +2,26 @@
 
 <div align="center">
 
-![Portfolio Banner](assets/images/uddyalok-reading-portrait.jpg)
+  <img src="assets/images/uddyalok-reading-portrait.jpg" width="320" alt="Uddyalok Biswas — Portfolio Portrait" style="border-radius: 16px; border: 2px solid #00f0ff; max-width: 100%; height: auto;" />
 
-### **Intelligent • Intuitive • Scalable Digital Experiences**
+  <br/><br/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-00f0ff.svg?style=for-the-badge)](LICENSE)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript ES6+](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Web Audio API](https://img.shields.io/badge/Web%20Audio%20API-8B5CF6?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+  <h3><strong>Intelligent • Intuitive • Scalable Digital Experiences</strong></h3>
 
-[**🌐 Live Demo**](http://localhost:8000) • [**💼 LinkedIn**](https://linkedin.com/in/uddyalokbiswas) • [**🐙 GitHub**](https://github.com/uddyalokbiswas) • [**⚡ Devfolio**](https://devfolio.co/@uddyalok)
+  <p>
+    <a href="https://github.com/uddyalokb700-cmk/Frontend/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-00f0ff.svg?style=for-the-badge" alt="License: MIT" /></a>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+    <img src="https://img.shields.io/badge/Web%20Audio%20API-8B5CF6?style=for-the-badge" alt="Web Audio API" />
+  </p>
+
+  <p>
+    <a href="https://linkedin.com/in/uddyalokbiswas"><b>💼 LinkedIn</b></a> • 
+    <a href="https://github.com/uddyalokbiswas"><b>🐙 GitHub</b></a> • 
+    <a href="https://devfolio.co/@uddyalok"><b>⚡ Devfolio</b></a> • 
+    <a href="mailto:contact.uddyalok@gmail.com"><b>✉️ Email</b></a>
+  </p>
 
 </div>
 
@@ -69,7 +78,7 @@ Frontend/
 │   └── main.js             # Core interaction engine (Audio, Cursor, Modals, Filter, Form, Clock)
 └── assets/
     └── images/             # Project showcase mockups, graphics, and portrait imagery
-        ├── uddyalok-portrait.jpg
+        ├── uddyalok-reading-portrait.jpg
         ├── fin-ai.jpg
         ├── customer-analytics.jpg
         ├── ecopulse-hackathon.jpg
