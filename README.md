@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Portfolio Banner](assets/images/uddyalok-portrait.jpg)
+![Portfolio Banner](assets/images/uddyalok-reading-portrait.jpg)
 
 ### **Intelligent • Intuitive • Scalable Digital Experiences**
 
