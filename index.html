@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <title>Uddyalok Biswas — Data Science Student, UI/UX Designer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Uddyalok Biswas: 2nd-year B.Tech CSE Data Science student at Narula Institute of Technology, specializing in Data Science, UI/UX Design, Backend & Full-Stack Web Development." />
+  <meta name="keywords" content="Uddyalok Biswas, Data Science, UI UX Designer, Full Stack Developer, Narula Institute of Technology, Python, SQL, React, Node.js, Web Design, Portfolio" />
+  <meta name="author" content="Uddyalok Biswas" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Uddyalok Biswas | Futuristic Portfolio" />
+  <meta property="og:description" content="I build intelligent, intuitive, and scalable digital experiences across Data Science, UI/UX, and Full-Stack Development." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Space Grotesk (Headings), Outfit (Body), JetBrains Mono (Code/Telemetry) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Interactive 60fps Cyber Canvas -->
+  <canvas id="canvas-bg"></canvas>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-center-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+
+  <!-- Custom Cursor Elements (Desktop only) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link" aria-label="Uddyalok Biswas Home">
+        <div class="logo-icon-box">UB</div>
+        <div class="logo-text-group">
+          <span class="logo-title">Uddyalok Biswas</span>
+          <span class="logo-status">
+            <span class="status-dot"></span> Available for Work
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Pill -->
+      <nav class="nav-links-wrapper" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions & Mobile Toggle -->
+      <div class="nav-actions">
+        <button id="sound-toggle-btn" class="sound-toggle-btn" title="Enable Cyber Audio" aria-label="Toggle Sound Effects">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" style="display: none;">Let's Talk</a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation Drawer" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <a href="#home" class="mobile-nav-link active">01 // Home</a>
+      <a href="#about" class="mobile-nav-link">02 // About Me</a>
+      <a href="#skills" class="mobile-nav-link">03 // Skills & Expertise</a>
+      <a href="#services" class="mobile-nav-link">04 // Services</a>
+      <a href="#projects" class="mobile-nav-link">05 // Projects & Showcase</a>
+      <a href="#experience" class="mobile-nav-link">06 // Experience & Hackathons</a>
+      <a href="#education" class="mobile-nav-link">07 // Education & Certs</a>
+      <a href="#contact" class="mobile-nav-link">08 // Contact & Inquiries</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="section hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Hero Headline & Narrative -->
+        <div class="hero-content reveal-init">
+          <div class="hero-badge-row">
+            <span class="cyber-badge">
+              <span class="status-dot"></span> B.Tech CSE (Data Science) • 2nd Year
+            </span>
+            <span class="cyber-badge cyber-badge-purple">
+              ⚡ Full-Stack & UI/UX
+            </span>
+          </div>
+
+          <div class="hero-name-row">
+            <span class="hero-greeting">// HELLO, WORLD. I AM</span>
+            <h1 class="hero-name gradient-text-cyber">Uddyalok Biswas</h1>
+            <h2 class="hero-headline">Data Science Student <span style="color: var(--cyan-neon);">|</span> UI/UX Designer <span style="color: var(--cyan-neon);">|</span> Full-Stack Developer</h2>
+          </div>
+
+          <p class="hero-statement">
+            “I build intelligent, intuitive, and scalable digital experiences.”
+          </p>
+
+          <p class="hero-desc">
+            B.Tech Data Science student passionate about UI/UX, full-stack development, data analytics, and building practical technology solutions. Driven by the intersection of data intelligence and human-centered design.
+          </p>
+
+          <!-- Primary CTAs -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/uddyalokbiswas" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/uddyalokbiswas" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://devfolio.co/@uddyalok" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Devfolio Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Futuristic Portrait with HUD Brackets -->
+        <div class="hero-portrait-wrapper reveal-init reveal-delay-2">
+          <div class="portrait-frame-box hud-box">
+            <div class="portrait-inner">
+              <img src="assets/images/uddyalok-portrait.jpg" alt="Uddyalok Biswas Portrait" class="portrait-img" />
+            </div>
+
+            <!-- Floating Micro Cards -->
+            <div class="floating-chip chip-top-right animate-float">
+              <div class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div>
+                <div class="chip-text-main">Narula Inst. of Tech</div>
+                <div class="chip-text-sub">CSE (Data Science) '29</div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-bottom-left animate-float-slow">
+              <div class="chip-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--purple-neon);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <div class="chip-text-main">Hackathon Builder</div>
+                <div class="chip-text-sub">Full-Stack & Data Apps</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Telemetry Strip -->
+      <div class="hero-telemetry-bar reveal-init reveal-delay-3">
+        <div class="telemetry-item">
+          <span>// STATUS:</span>
+          <strong>2nd Year B.Tech Student</strong>
+        </div>
+        <div class="telemetry-item">
+          <span>// FOCUS:</span>
+          <strong>Data Science + UI/UX + Full-Stack</strong>
+        </div>
+        <div class="telemetry-item">
+          <span>// LOCATION:</span>
+          <strong>Kolkata, India</strong>
+        </div>
+        <div class="telemetry-item">
+          <span>// ACTIVE PROJECT:</span>
+          <strong style="color: var(--emerald-neon);">Fin AI Application 🚀</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT ME SECTION (BENTO GRID)
+       ======================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Profile Identity</div>
+        <h2 class="section-title">Bridging Data Analytics & Intuitive Design</h2>
+        <p class="section-desc">
+          A 2nd-year B.Tech CSE Data Science student at Narula Institute of Technology with a relentless passion for building practical, scalable software.
+        </p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="about-bento-grid">
+        
+        <!-- Main Story Bento -->
+        <div class="bento-card about-main-card hud-box reveal-init">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;">
+              <span class="cyber-badge cyber-badge-emerald">Academic & Practical Journey</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">// 2025–2029</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 1rem;">
+              Cultivating the Full-Spectrum Tech Mindset
+            </h3>
+            <p class="about-story-text">
+              I am currently pursuing my <strong>B.Tech in Computer Science and Engineering (Data Science)</strong> at <strong>Narula Institute of Technology</strong> with an expected graduation in <strong>2029</strong>. My journey centers on unifying data-driven analytical depth with modern full-stack web engineering and human-centered UI/UX aesthetics.
+            </p>
+            <p class="about-story-text">
+              Rather than staying purely theoretical, I actively apply my craft through <strong>online hackathons</strong>, <strong>freelance web design projects</strong>, and <strong>end-to-end application development</strong>. I embrace a strong learning-oriented mindset, constantly experimenting with new architectures and building software products that solve real-world problems.
+            </p>
+          </div>
+
+          <!-- Stats Micro-Row -->
+          <div class="about-stats-row">
+            <div class="about-stat-box">
+              <div class="stat-number">2nd</div>
+              <div class="stat-label">Academic Year</div>
+            </div>
+            <div class="about-stat-box">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Core Domains</div>
+            </div>
+            <div class="about-stat-box">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Builder Drive</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlight Card 1: B.Tech Data Science -->
+        <div class="bento-card highlight-card reveal-init reveal-delay-1">
+          <div>
+            <div class="highlight-icon-title">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <h4>B.Tech Data Science</h4>
+            </div>
+            <p class="highlight-desc">
+              Strong grounding in algorithmic thinking, data structures, relational database modeling, and analytical programming at Narula Institute of Technology.
+            </p>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="tech-tag">Narula Inst. of Tech</span>
+            <span class="tech-tag">Batch 2025–2029</span>
+          </div>
+        </div>
+
+        <!-- Highlight Card 2: Hackathon Participant -->
+        <div class="bento-card highlight-card reveal-init reveal-delay-2">
+          <div>
+            <div class="highlight-icon-title">
+              <div class="skill-cat-icon" style="color: var(--purple-neon); border-color: var(--border-purple); background: rgba(139, 92, 246, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h4>Hackathon Participant</h4>
+            </div>
+            <p class="highlight-desc">
+              Thriving in high-tempo, time-constrained hackathons. Ideating, rapid prototyping, and collaborating to ship innovative technology solutions.
+            </p>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="tech-tag">Rapid Prototyping</span>
+            <span class="tech-tag">Agile Sprinting</span>
+          </div>
+        </div>
+
+        <!-- Highlight Card 3: Freelance Web Designer -->
+        <div class="bento-card highlight-card reveal-init reveal-delay-1">
+          <div>
+            <div class="highlight-icon-title">
+              <div class="skill-cat-icon" style="color: var(--emerald-neon); border-color: var(--border-emerald); background: rgba(0, 255, 157, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+              </div>
+              <h4>Freelance Web Designer</h4>
+            </div>
+            <p class="highlight-desc">
+              Designing tailored, responsive websites for clients with a keen focus on modern visual hierarchy, brand identity, and clean micro-interactions.
+            </p>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="tech-tag">Client Projects</span>
+            <span class="tech-tag">Modern UI</span>
+          </div>
+        </div>
+
+        <!-- Highlight Card 4: Full-Stack & App Dev -->
+        <div class="bento-card highlight-card reveal-init reveal-delay-2">
+          <div>
+            <div class="highlight-icon-title">
+              <div class="skill-cat-icon" style="color: var(--amber-neon); border-color: var(--amber-glow); background: rgba(255, 184, 0, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h4>Full-Stack & App Dev</h4>
+            </div>
+            <p class="highlight-desc">
+              Currently engineering full-scale applications with React, Node.js, and Python backend APIs, establishing reliable architectures.
+            </p>
+          </div>
+          <div style="margin-top: 1rem;">
+            <span class="tech-tag">Active App Dev</span>
+            <span class="tech-tag">Full-Stack Web</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SKILLS & EXPERTISE SECTION
+       ======================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Technical Matrix</div>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-desc">
+          Structured across foundational programming, data intelligence, modern full-stack development, and digital product design.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Programming -->
+        <div class="skill-category-card hud-box reveal-init">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div>
+              <div class="skill-cat-title">Programming</div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Core Languages & Logic</div>
+            </div>
+          </div>
+          <div class="skill-tag-list">
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">⚡</span> C Language
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--amber-neon);">☕</span> Java
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--emerald-neon);">🐍</span> Python
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--purple-neon);">📜</span> JavaScript (ES6+)
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">⚙️</span> OOP & Data Structures
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Data & Analytics -->
+        <div class="skill-category-card hud-box reveal-init reveal-delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="color: var(--emerald-neon); border-color: var(--border-emerald); background: rgba(0, 255, 157, 0.08);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div>
+              <div class="skill-cat-title">Data & Analytics</div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Querying & Data Science</div>
+            </div>
+          </div>
+          <div class="skill-tag-list">
+            <div class="skill-pill">
+              <span style="color: var(--emerald-neon);">🗄️</span> SQL & Relational DBs
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">🐼</span> Pandas
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--purple-neon);">🔢</span> NumPy
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--amber-neon);">📊</span> Data Analytics
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--emerald-neon);">📈</span> Data Interpretation
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Development -->
+        <div class="skill-category-card hud-box reveal-init reveal-delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="color: var(--purple-neon); border-color: var(--border-purple); background: rgba(139, 92, 246, 0.08);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div>
+              <div class="skill-cat-title">Development</div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Web & Application Stack</div>
+            </div>
+          </div>
+          <div class="skill-tag-list">
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">⚛️</span> React
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--emerald-neon);">🟢</span> Node.js
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--purple-neon);">🌐</span> Frontend Development
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--amber-neon);">🔌</span> Backend Development
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">🚀</span> Full-Stack Web Development
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Design -->
+        <div class="skill-category-card hud-box reveal-init reveal-delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="color: var(--amber-neon); border-color: var(--amber-glow); background: rgba(255, 184, 0, 0.08);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"></path></svg>
+            </div>
+            <div>
+              <div class="skill-cat-title">Design</div>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">UI/UX & Visual Systems</div>
+            </div>
+          </div>
+          <div class="skill-tag-list">
+            <div class="skill-pill">
+              <span style="color: var(--amber-neon);">🎨</span> UI/UX Design
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--cyan-neon);">📐</span> Web Design
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--purple-neon);">📱</span> Responsive Layouts
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--emerald-neon);">✨</span> Wireframing & Prototyping
+            </div>
+            <div class="skill-pill">
+              <span style="color: var(--coral-neon);">💎</span> Dark Mode Design Systems
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SERVICES SECTION
+       ======================================================================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Value & Capabilities</div>
+        <h2 class="section-title">Services Offered</h2>
+        <p class="section-desc">
+          Transforming concepts into high-performing, aesthetically rich, and scalable digital solutions.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Service 1: UI/UX Design -->
+        <div class="service-card hud-box reveal-init">
+          <div>
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <ul class="service-feature-list">
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>User-focused interface and interaction design</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modern, intuitive, and responsive layouts</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Clean, delightful digital experiences</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm" style="align-self: flex-start;">Inquire Service</a>
+        </div>
+
+        <!-- Service 2: Web Design -->
+        <div class="service-card hud-box reveal-init reveal-delay-1">
+          <div>
+            <div class="service-icon-box" style="color: var(--purple-neon); border-color: var(--border-purple); background: rgba(139, 92, 246, 0.1);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="service-title">Web Design</h3>
+            <ul class="service-feature-list">
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modern, high-conversion responsive websites</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Professional and sleek landing pages</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Interactive, branded web experiences</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm" style="align-self: flex-start;">Inquire Service</a>
+        </div>
+
+        <!-- Service 3: Frontend Development -->
+        <div class="service-card hud-box reveal-init reveal-delay-2">
+          <div>
+            <div class="service-icon-box" style="color: var(--emerald-neon); border-color: var(--border-emerald); background: rgba(0, 255, 157, 0.1);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="service-title">Frontend Development</h3>
+            <ul class="service-feature-list">
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Fluid, cross-device responsive interfaces</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>React-based modern single-page applications</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Smooth animations & interactive user experiences</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm" style="align-self: flex-start;">Inquire Service</a>
+        </div>
+
+        <!-- Service 4: Backend & Full-Stack -->
+        <div class="service-card hud-box reveal-init reveal-delay-3">
+          <div>
+            <div class="service-icon-box" style="color: var(--amber-neon); border-color: var(--amber-glow); background: rgba(255, 184, 0, 0.1);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="service-title">Backend & Full-Stack</h3>
+            <ul class="service-feature-list">
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Backend application engineering & database modeling</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>API-driven full-stack web solutions</span>
+              </li>
+              <li class="service-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Scalable, maintainable application architectures</span>
+              </li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-sm" style="align-self: flex-start;">Inquire Service</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROJECTS & PORTFOLIO SECTION
+       ======================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Engineering & Design Lab</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">
+          Explore highlighted work across Data Science, AI applications, Hackathons, and UI/UX design systems.
+        </p>
+      </div>
+
+      <!-- Animated Filter Pills -->
+      <div class="project-filter-bar reveal-init">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="data">Data & SQL</button>
+        <button class="filter-btn" data-filter="ai">AI & ML</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="ui/ux">UI/UX Design</button>
+        <button class="filter-btn" data-filter="hackathons">Hackathons</button>
+      </div>
+
+      <!-- Projects Grid (Populated Dynamically) -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EXPERIENCE & HACKATHON TIMELINE SECTION
+       ======================================================================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Practical Trajectory</div>
+        <h2 class="section-title">Experience & Hackathons</h2>
+        <p class="section-desc">
+          A genuine record of hands-on application engineering, freelance digital design, and competitive hackathons.
+        </p>
+      </div>
+
+      <div class="timeline-track">
+        
+        <!-- Timeline Item 1: Application Development -->
+        <div class="timeline-item reveal-init">
+          <div class="timeline-node-pin"></div>
+          <div class="timeline-content-card hud-box">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Application Development</h3>
+              <span class="timeline-date">2024 — Present • Ongoing</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Currently developing full-scale software applications, demonstrating hands-on architectural and coding experience.</li>
+              <li>Building the <strong>Fin AI App</strong>, integrating Python backend intelligence with responsive frontend interfaces.</li>
+              <li>Implementing clean code practices, modular API routing, database queries, and user state management.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Hackathon Participant -->
+        <div class="timeline-item reveal-init reveal-delay-1">
+          <div class="timeline-node-pin" style="border-color: var(--purple-neon); box-shadow: 0 0 12px var(--purple-neon);"></div>
+          <div class="timeline-content-card hud-box">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Hackathon Participant</h3>
+              <span class="timeline-date" style="color: var(--purple-neon); border-color: var(--border-purple); background: rgba(139, 92, 246, 0.08);">2023 — Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Participated in multiple online hackathons, tackling diverse technical problem statements under strict time constraints.</li>
+              <li>Collaborated with peers to conceptualize, prototype, and build practical software and product solutions.</li>
+              <li>Sharpened problem-solving agility, rapid MVP design, and high-pressure code execution.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Freelance Web Designer -->
+        <div class="timeline-item reveal-init reveal-delay-2">
+          <div class="timeline-node-pin" style="border-color: var(--emerald-neon); box-shadow: 0 0 12px var(--emerald-neon);"></div>
+          <div class="timeline-content-card hud-box">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Freelance Web Designer</h3>
+              <span class="timeline-date" style="color: var(--emerald-neon); border-color: var(--border-emerald); background: rgba(0, 255, 157, 0.08);">2023 — Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and delivered custom websites and digital interfaces for freelance clients.</li>
+              <li>Handled visual design systems, layout structure, cross-device responsiveness, and intuitive user experiences.</li>
+              <li>Ensured seamless client collaboration from initial wireframes to polished live deployments.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDUCATION & CERTIFICATIONS SECTION
+       ======================================================================== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Academic & Credentials</div>
+        <h2 class="section-title">Education & Certifications</h2>
+        <p class="section-desc">
+          Continuous academic learning and verified skill milestones in data science and engineering.
+        </p>
+      </div>
+
+      <div class="edu-cert-container">
+        
+        <!-- Education Card -->
+        <div class="bento-card hud-box reveal-init">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;">
+            <span class="cyber-badge">Undergraduate Degree</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">// CURRENT</span>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.3rem;">
+              B.Tech in CSE — Data Science
+            </h3>
+            <div style="font-size: 1.1rem; color: var(--cyan-neon); font-weight: 600;">
+              Narula Institute of Technology
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">
+              Timeline: 2025 — 2029 (Currently in 2nd Year)
+            </div>
+          </div>
+
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+            Specializing in Core Computer Science, Relational Databases, Data Structures, Statistical Analysis, and Machine Learning foundations.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="tech-tag">Computer Science</span>
+            <span class="tech-tag">Data Science</span>
+            <span class="tech-tag">Algorithms</span>
+            <span class="tech-tag">Software Engineering</span>
+          </div>
+        </div>
+
+        <!-- Certifications Bento List -->
+        <div class="bento-card hud-box reveal-init reveal-delay-1">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;">
+            <span class="cyber-badge cyber-badge-purple">Verified Achievements</span>
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">// CREDENTIALS</span>
+          </div>
+
+          <div class="cert-card-list">
+            
+            <!-- Cert 1: Google Solution Challenge -->
+            <div class="cert-item">
+              <div class="cert-info">
+                <div class="cert-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                </div>
+                <div>
+                  <div class="cert-name">Google Solution Challenge Certificate</div>
+                  <div class="cert-issuer">Google Developer Student Clubs / Google</div>
+                </div>
+              </div>
+              <span class="cyber-badge cyber-badge-emerald btn-sm" style="font-size: 0.75rem;">Verified</span>
+            </div>
+
+            <!-- Cert 2: Deloitte Online Certificate -->
+            <div class="cert-item">
+              <div class="cert-info">
+                <div class="cert-icon" style="color: var(--purple-neon); border-color: var(--border-purple); background: rgba(139, 92, 246, 0.1);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                </div>
+                <div>
+                  <div class="cert-name">Deloitte Online Certificate</div>
+                  <div class="cert-issuer">Deloitte Technology & Consulting</div>
+                </div>
+              </div>
+              <span class="cyber-badge cyber-badge-purple btn-sm" style="font-size: 0.75rem;">Verified</span>
+            </div>
+
+            <!-- Cert 3: IBM SkillsBuild -->
+            <div class="cert-item">
+              <div class="cert-info">
+                <div class="cert-icon" style="color: var(--amber-neon); border-color: var(--amber-glow); background: rgba(255, 184, 0, 0.1);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <div class="cert-name">IBM SkillsBuild</div>
+                  <div class="cert-issuer">IBM Professional Learning</div>
+                </div>
+              </div>
+              <span class="cyber-badge btn-sm" style="color: var(--amber-neon); border-color: var(--amber-glow); font-size: 0.75rem; background: rgba(255, 184, 0, 0.08);">In Progress</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT SECTION
+       ======================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-subtitle">Get In Touch</div>
+        <h2 class="section-title">“Let's build something together.”</h2>
+        <p class="section-desc">
+          Interested in collaborating on hackathons, freelance design, internships, or data & web projects? Drop a message below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Info & Quick Copy -->
+        <div class="contact-card hud-box reveal-init">
+          <h3 style="font-family: var(--font-display); font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.8rem;">
+            Direct Transmission
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Email is my preferred communication channel for project inquiries, freelance design briefs, and technical discussions.
+          </p>
+
+          <div class="email-copy-badge" id="copy-email-btn" title="Click to copy email address">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--cyan-neon);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--text-primary); font-weight: 600;">
+                  contact.uddyalok@gmail.com
+                </div>
+                <div style="font-size: 0.75rem; color: var(--cyan-neon);">Click to copy email</div>
+              </div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--cyan-neon);"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+              // NETWORK PROFILES
+            </div>
+            <div style="display: flex; gap: 0.8rem;">
+              <a href="https://github.com/uddyalokbiswas" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/uddyalokbiswas" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-card hud-box reveal-init reveal-delay-1">
+          <form id="portfolio-contact-form">
+            <div class="contact-form-group">
+              <label for="form-name" class="form-label">// YOUR NAME</label>
+              <input type="text" id="form-name" name="from_name" class="form-input" placeholder="e.g. Alex Morgan" required />
+            </div>
+
+            <div class="contact-form-group">
+              <label for="form-email" class="form-label">// YOUR EMAIL ADDRESS</label>
+              <input type="email" id="form-email" name="from_email" class="form-input" placeholder="e.g. alex@company.com" required />
+            </div>
+
+            <div class="contact-form-group">
+              <label for="form-message" class="form-label">// TRANSMISSION MESSAGE</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Describe your project, hackathon collaboration, or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <div class="footer-brand-title">Uddyalok Biswas</div>
+          <div class="footer-brand-sub">B.Tech CSE Data Science • Narula Institute of Technology</div>
+        </div>
+
+        <div class="footer-clock-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span id="live-clock-time">00:00:00 IST</span>
+        </div>
+
+        <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Scroll back to top">
+          Back to Top ↑
+        </button>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 Uddyalok Biswas. Designed with precision & futuristic dark aesthetics.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+          LAT 22.5726° N, LON 88.3639° E // KOLKATA
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PROJECT MODAL OVERLAY
+       ======================================================================== -->
+  <div id="project-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="modal-content-container">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- EmailJS Browser SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- JavaScript Modules -->
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* ==========================================================================
+   DESIGN TOKENS & SYSTEM VARIABLES
+   Uddyalok Biswas — Dark Futuristic Portfolio
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Obsidian Base & Cyber Accents */
+  --bg-void: #030305;
+  --bg-primary: #07080d;
+  --bg-secondary: #0e1018;
+  --bg-surface: #141724;
+  --bg-card: rgba(16, 19, 31, 0.72);
+  --bg-card-hover: rgba(24, 29, 46, 0.88);
+  --bg-glass: rgba(10, 12, 20, 0.78);
+  --bg-glass-heavy: rgba(7, 8, 13, 0.88);
+
+  /* Neon & Cyber Accents */
+  --cyan-neon: #00f0ff;
+  --cyan-dim: #00b4d8;
+  --cyan-glow: rgba(0, 240, 255, 0.3);
+  --cyan-glow-intense: rgba(0, 240, 255, 0.65);
+
+  --purple-neon: #8b5cf6;
+  --purple-dim: #6d28d9;
+  --purple-glow: rgba(139, 92, 246, 0.35);
+
+  --emerald-neon: #00ff9d;
+  --emerald-dim: #059669;
+  --emerald-glow: rgba(0, 255, 157, 0.3);
+
+  --amber-neon: #ffb800;
+  --amber-glow: rgba(255, 184, 0, 0.3);
+
+  --coral-neon: #ff3366;
+  --coral-glow: rgba(255, 51, 102, 0.35);
+
+  /* Text & Content Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+  --text-cyan: #38bdf8;
+
+  /* Borders & Hairlines */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-cyan: rgba(0, 240, 255, 0.35);
+  --border-purple: rgba(139, 92, 246, 0.35);
+  --border-emerald: rgba(0, 255, 157, 0.35);
+
+  /* Gradients */
+  --gradient-cyber: linear-gradient(135deg, #00f0ff 0%, #8b5cf6 100%);
+  --gradient-emerald: linear-gradient(135deg, #00ff9d 0%, #00f0ff 100%);
+  --gradient-amber: linear-gradient(135deg, #ffb800 0%, #ff3366 100%);
+  --gradient-dark-card: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.005) 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(0, 240, 255, 0.15) 0%, transparent 70%);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Shadows */
+  --shadow-card: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px var(--border-subtle);
+  --shadow-card-hover: 0 24px 48px -12px rgba(0, 0, 0, 0.85), 0 0 20px -2px var(--cyan-glow);
+  --shadow-neon-cyan: 0 0 25px var(--cyan-glow);
+  --shadow-neon-purple: 0 0 25px var(--purple-glow);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Spacing & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --max-width: 1280px;
+  --header-height: 72px;
+}
